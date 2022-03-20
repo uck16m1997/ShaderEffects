@@ -22,7 +22,7 @@ Material:
     m_Floats:
     - _Glossiness: 1
     - _Metallic: 0.34
-    - _MySliderValue: 1.97
+    - _MySliderValue: 1.51
     m_Colors:
     - _AmbientColor: {r: 0.8113208, g: 0.26406196, b: 0.26406196, a: 1}
     - _Color: {r: 1, g: 0.5737237, b: 0, a: 1}
