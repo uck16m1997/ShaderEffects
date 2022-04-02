@@ -27,5 +27,5 @@ Material:
     - _Glossiness: 0.5
     - _Metallic: 0
     m_Colors:
-    - _Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+    - _Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
   m_BuildTextureStacks: []

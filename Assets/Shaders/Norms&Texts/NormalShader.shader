@@ -4,7 +4,7 @@ Shader "Custom/NormalShader"
     {
         _Color ("Color", Color) = (0,1,0,1)
         _NormalTex("Normal Map",2D) = "bump" {}
-        _NormalMapIntensity("Normal intensity", Range(0,3)) = 1
+        _NormalMapIntensity("Normal intensity", Range(-10,10)) = 1
     }
     SubShader
     {
@@ -38,9 +38,7 @@ Shader "Custom/NormalShader"
 
             float3 normalMap = UnpackNormal(tex2D(_NormalTex, IN.uv_NormalTex));
 
-            normalMap.r = normalMap.r * _NormalMapIntensity;        
-            normalMap.g = normalMap.g * _NormalMapIntensity;
-            normalMap.g = normalMap.g * _NormalMapIntensity;
+            normalMap *= float3(_NormalMapIntensity,_NormalMapIntensity,1);
 
             o.Normal = normalize(normalMap.rgb);
 

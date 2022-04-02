@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/LightingScenes.unity
+- path: Assets/Scenes/Reflections.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
