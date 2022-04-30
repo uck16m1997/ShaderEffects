@@ -48,12 +48,12 @@ Shader "Custom/RimShader"
             else if (rim >0.4){
                 o.Emission =float3(0.7,0.7,0);
             }
-            // else if (rim >0.15){
-            //     o.Emission =float3(0,0,0.5);
-            // }
-            // else{
-            //     o.Emission = float3(0.3,0,0.3);
-            // }
+            else if (rim >0.15){
+                o.Emission =float3(0,0,0.5);
+            }
+            else{
+                o.Emission = float3(0.3,0,0.3);
+            }
         }
         ENDCG
     }

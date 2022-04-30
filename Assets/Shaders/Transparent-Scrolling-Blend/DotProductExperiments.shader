@@ -2,19 +2,23 @@ Shader "Custom/DotProductExperiments"
 {
     Properties
     {
-        // _Color ("Color", Color) = (1,1,1,1)
-        // _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        // _Glossiness ("Smoothness", Range(0,1)) = 0.5
-        // _Metallic ("Metallic", Range(0,1)) = 0.0
+        _RimColor ("Rim Color",Color) = (0.0,0.5,0.0)
+        _RimPower ("Rim Power",Range(0.5,8.0)) = 3.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
-        LOD 200
+        Tags { "Queue"="Transparent" }
+        // LOD 200
+
+        Pass {
+            ZWrite On
+            ColorMask 0
+        }
+
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Lambert
+        #pragma surface surf Lambert alpha:fade
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
 
@@ -25,9 +29,8 @@ Shader "Custom/DotProductExperiments"
             float3 viewDir;
         };
 
-        // half _Glossiness;
-        // half _Metallic;
-        // fixed4 _Color;
+        float4 _RimColor;
+        float _RimPower;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -38,14 +41,9 @@ Shader "Custom/DotProductExperiments"
 
         void surf (Input IN, inout SurfaceOutput o)
         {
-            half dotp = dot( IN.viewDir, o.Normal);
-            // Albedo comes from a texture tinted by color
-            // fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-            o.Albedo = float3(dotp,0.3,0.3);
-            // // Metallic and smoothness come from slider variables
-            // o.Metallic = _Metallic;
-            // o.Smoothness = _Glossiness;
-            // o.Alpha = c.a;
+            half rim = 1.0 - saturate(dot(normalize(IN.viewDir),o.Normal));
+            o.Emission = _RimColor.rgb * pow(rim,_RimPower) *10;
+            o.Alpha = pow(rim,_RimPower);
         }
         ENDCG
     }

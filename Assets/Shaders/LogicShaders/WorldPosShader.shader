@@ -3,7 +3,9 @@ Shader "Custom/WorldPosShader"
     Properties
     {
         _Color ("Rim Color", Color) = (0,0.5,0.5,0.0)
-        _RimPower ("Rim Power", Range(0.5,8.0)) = 3.0
+        // _RimPower ("Line Multiplier", Range(0.5,8.0)) = 3.0
+        _HorWidth ("Horizontal Width", Range(0.01,10)) = 0.5
+        _VerWidth ("Vertical Width", Range(0.01,10)) = 0.5
 
     }
     SubShader
@@ -29,6 +31,8 @@ Shader "Custom/WorldPosShader"
 
         fixed4 _Color;
         float _RimPower;
+        float _HorWidth;
+        float _VerWidth;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -42,9 +46,14 @@ Shader "Custom/WorldPosShader"
             // Albedo comes from a texture tinted by color
             half rim = 1 - saturate(dot(normalize(IN.viewDir),o.Normal));
             // o.Emission = _Color.rgb * pow(rim,_RimPower);
-            float fraction = frac(IN.worldPos.y*10 *0.5) ;
-            _RimPower = fraction;
-            o.Emission = (fraction > 0.4 ? _Color : float3(0.3,0,0.3)) * rim ;
+            float y_frac = frac(IN.worldPos.y*10 *_HorWidth) ;
+            float x_frac = frac(IN.worldPos.x*10 *_VerWidth) ;
+            float3 em = float3(0.5,0,0.5);
+            if (y_frac > 0.4 && x_frac> 0.4){
+                em = _Color;
+            }
+            o.Emission =em * rim;
+
         }
         ENDCG
     }
