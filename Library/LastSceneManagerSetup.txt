@@ -1,5 +1,9 @@
 sceneSetups:
-- path: Assets/Scenes/VertexExperiments.unity
+- path: Assets/Scenes/VolumetricExperiments.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
+- path: Assets/Scenes/Water.unity
+  isLoaded: 1
+  isActive: 0
   isSubScene: 0

@@ -43,8 +43,11 @@
      <None Include="Assets\Shaders\VertexShaders\VFDiffuseShadows.shader" />
      <None Include="Assets\Shaders\Visual Effects\ExtrudeShader.shader" />
      <None Include="Assets\Shaders\VertexShaders\VFGrabPass.shader" />
+     <None Include="Assets\Shaders\Visual Effects\AdvancedOutlineShader.shader" />
      <None Include="Assets\Shaders\SimpleShaders\StandardColor.shader" />
+     <None Include="Assets\Shaders\Visual Effects\VFPlasma.shader" />
      <None Include="Assets\Shaders\AlphaBlend\Challenge\StencilWindow.shader" />
+     <None Include="Assets\Shaders\Visual Effects\SimpleOutlineShader.shader" />
      <None Include="Assets\Shaders\AlphaBlend\Leaves.shader" />
      <None Include="Assets\Shaders\Transparent-Scrolling-Blend\ScrollingUVs.shader" />
      <None Include="Assets\Shaders\SimpleShaders\StandardDiffuse.shader" />
@@ -55,6 +58,8 @@
      <None Include="Assets\Shaders\AlphaBlend\HoleStencilBuffer.shader" />
      <None Include="Assets\Shaders\Transparent-Scrolling-Blend\TransparancyShader.shader" />
      <None Include="Assets\Shaders\LogicShaders\WorldPosShader.shader" />
+     <None Include="Assets\Shaders\Visual Effects\Waves.shader" />
+     <None Include="Assets\Shaders\Visual Effects\GlassUpdated.shader" />
      <None Include="Assets\Shaders\Norms&amp;Texts\NormalExpermimentShader.shader" />
      <None Include="Assets\Shaders\Transparent-Scrolling-Blend\TextureBlendingShader.shader" />
      <None Include="Assets\Shaders\VertexShaders\VFMat.shader" />
@@ -68,6 +73,7 @@
      <None Include="Assets\Shaders\LightingShaders\SimpleLambert.shader" />
      <None Include="Assets\Shaders\Norms&amp;Texts\TexturedShader.shader" />
      <None Include="Assets\Shaders\AlphaBlend\Challenge\Flipper.shader" />
+     <None Include="Assets\Shaders\Visual Effects\Plasma.shader" />
      <None Include="Assets\Shaders\LightingShaders\StandardPBR.shader" />
      <None Include="Assets\Shaders\Transparent-Scrolling-Blend\HolographicShader.shader" />
      <None Include="Assets\Shaders\Norms&amp;Texts\NormalShader.shader" />
