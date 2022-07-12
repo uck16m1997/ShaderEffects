@@ -38,6 +38,8 @@
   <ItemGroup>
      <Compile Include="Assets\Shaders\Norms&amp;Texts\Scripts\ShowNormals.cs" />
      <Compile Include="Assets\Shaders\Norms&amp;Texts\Scripts\NormalPlay.cs" />
+     <Compile Include="Assets\Shaders\Volumetric Shaders\Clouds.cs" />
+     <Compile Include="Assets\Shaders\Volumetric Shaders\CloudsV2.cs" />
      <None Include="Assets\Shaders\AlphaBlend\StencilBufferBackground.shader" />
      <None Include="Assets\Shaders\LightingShaders\ToonShader.shader" />
      <None Include="Assets\Shaders\VertexShaders\VFDiffuseShadows.shader" />
@@ -56,12 +58,15 @@
      <None Include="Assets\Shaders\VertexShaders\BasicVF.shader" />
      <None Include="Assets\Shaders\SimpleShaders\CustomDiffuse.shader" />
      <None Include="Assets\Shaders\AlphaBlend\HoleStencilBuffer.shader" />
+     <None Include="Assets\Shaders\Volumetric Shaders\SphericalFog.shader" />
      <None Include="Assets\Shaders\Transparent-Scrolling-Blend\TransparancyShader.shader" />
      <None Include="Assets\Shaders\LogicShaders\WorldPosShader.shader" />
      <None Include="Assets\Shaders\Visual Effects\Waves.shader" />
+     <None Include="Assets\Shaders\Volumetric Shaders\CloudsCamera.shader" />
      <None Include="Assets\Shaders\Visual Effects\GlassUpdated.shader" />
      <None Include="Assets\Shaders\Norms&amp;Texts\NormalExpermimentShader.shader" />
      <None Include="Assets\Shaders\Transparent-Scrolling-Blend\TextureBlendingShader.shader" />
+     <None Include="Assets\Shaders\Volumetric Shaders\CloudShader.shader" />
      <None Include="Assets\Shaders\VertexShaders\VFMat.shader" />
      <None Include="Assets\Shaders\VertexShaders\VFLightingShader.shader" />
      <None Include="Assets\Shaders\LightingShaders\CellShade.shader" />
@@ -76,6 +81,7 @@
      <None Include="Assets\Shaders\Visual Effects\Plasma.shader" />
      <None Include="Assets\Shaders\LightingShaders\StandardPBR.shader" />
      <None Include="Assets\Shaders\Transparent-Scrolling-Blend\HolographicShader.shader" />
+     <None Include="Assets\Shaders\Volumetric Shaders\PrimitiveSphere.shader" />
      <None Include="Assets\Shaders\Norms&amp;Texts\NormalShader.shader" />
      <None Include="Assets\Shaders\Buffer&amp;Queues\ShaderQueueExperiments.shader" />
      <None Include="Assets\Shaders\LogicShaders\RimShader.shader" />

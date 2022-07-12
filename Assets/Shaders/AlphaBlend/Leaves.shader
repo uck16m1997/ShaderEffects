@@ -7,6 +7,10 @@ Shader "Custom/Leaves"
     SubShader
     {
         Tags { "Queue"="Transparent" }
+
+        // Blending This Item * SrcAlpha + Background*OneMinusSrcAlpha
+        // SrcAlpha == 0 When Alpha 
+        // OneMinusSrcAlpha == 0 When not Alpha
         Blend SrcAlpha OneMinusSrcAlpha
         Cull Off
         Pass {
