@@ -20,5 +20,4 @@ Implementations of different shaders on my journey of learning about shaders wit
 
 ## Volumetric Shaders
 
-![Animation](https://user-images.githubusercontent.com/33462791/178484345-5d69e4d6-58d4-4ad9-871c-ed799e5529fa.gif)
-
+![Animation](https://user-images.githubusercontent.com/33462791/178484961-2874ec1e-5b71-4353-93ad-ba23ce043fe4.gif)
